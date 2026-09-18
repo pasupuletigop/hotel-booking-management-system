@@ -1,7 +1,7 @@
 const { Ollama } = require("ollama");
 
 const ollama = new Ollama({
-  host: "http://127.0.0.1:11434",
+  host: process.env.OLLAMA_HOST || "http://127.0.0.1:11434",
 });
 
 const OLLAMA_MODEL =
